@@ -1,7 +1,7 @@
 //畫布設定
 var bgImg=document.createElement("img");
 var enemyImg=document.createElement("img");
-var towerbtn=document.createElement("btn");
+var towerbtn=document.createElement("img");
 bgImg.src="images/map3.png";
 enemyImg.src="images/jason.gif"
 towerbtn.src="images/tower-btn.png";
