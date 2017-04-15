@@ -4,7 +4,7 @@ var enemyImg=document.createElement("img");
 var towerbtn=document.createElement("btn");
 bgImg.src="images/map3.png";
 enemyImg.src="images/jason.gif"
-towerbtn.src="images/btn.png";
+towerbtn.src="images/towerbtn.png";
 var canvas=document.getElementById("game-canvas");
 var ctx=canvas.getContext("2d");
 
