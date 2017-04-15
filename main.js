@@ -16,7 +16,7 @@ y:448
 function draw(){
 ctx.drawImage(bgImg,0,0);
 ctx.drawImage(enemyImg,enemy.x,enemy.y)
-ctx.drawImage(towerbtn,560,432,400,50);
+ctx.drawImage(towerbtn,560,432,100,50);
 }
 setInterval(draw,16);
 
