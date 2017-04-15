@@ -7,7 +7,7 @@ var drytower=document.createElement("img");
 bgImg.src="images/map3.png";
 enemyImg.src="images/jason.gif"
 towerbtn.src="images/tower-btn.png";
-
+drytower.src="images/tower-btn.png";
 
 var canvas=document.getElementById("game-canvas");
 var ctx=canvas.getContext("2d");
