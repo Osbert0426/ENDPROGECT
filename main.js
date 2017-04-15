@@ -32,7 +32,7 @@ function draw(){
 ctx.drawImage(bgImg,0,0);
 ctx.drawImage(enemyImg,enemy.x,enemy.y)
 ctx.drawImage(towerbtn,560,432,100,100);
- ctx.drawImage(drytower,event.offsetX,event.offsetY,);
+ ctx.drawImage(drytower,cursur.x,cursur.y,);
   
   
 }
