@@ -1,7 +1,7 @@
 //畫布設定
 var bgImg=document.createElement("img");
 var enemyImg=document.createElement("img");
-bgImg.src="images/map.png";
+bgImg.src="images/map3.png";
 enemyImg.src="images/jason.gif"
 var canvas=document.getElementById("game-canvas");
 var ctx=canvas.getContext("2d");
