@@ -12,12 +12,18 @@ drytower.src="images/tower.png";
 var canvas=document.getElementById("game-canvas");
 var ctx=canvas.getContext("2d");
 var isBuilding = false;
-
+var FPS=60
 
 //set敵人
 var enemy={
 x:96,
 y:448
+ speedx:0,
+ speedy:-64,
+ move:function(){
+this.x=this.x+y.speedx/60;
+this.y=this.y+x.speedy/60;
+}
 };
 
 var cursor={
