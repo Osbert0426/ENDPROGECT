@@ -35,13 +35,12 @@ cursur.y=event.offsetY
 })
 $("#game-canvas").on("click",function(event){
 if(isCollided(cursor.x,cursor.y,560,432,100,100)){
-isBuilding=true;   }else{
-isBuilding=false;
-}else if(isBuild&&!isCollided(cursor.x,cursor.y,560,432,100,100)){
+isBuilding=true;   }
+else if(isBuild&&!isCollided(cursor.x,cursor.y,560,432,100,100)){
 tower.x=cursor.x;
 tower.y=cursor.y;
 }else
-{isBuild=faise
+{isBuilding=faise;
      }
 })
 
