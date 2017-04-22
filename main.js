@@ -17,12 +17,12 @@ var FPS=60
 //set敵人
 var enemy={
 x:96,
-y:448
+y:448,
  speedx:0,
  speedy:-64,
  move:function(){
-this.x=this.x+y.speedx/60;
-this.y=this.y+x.speedy/60;
+this.x=this.x+this.speedx/FPS;
+this.y=this.y+this.speedy/FPS;
 }
 };
 
@@ -51,6 +51,7 @@ tower.y=cursor.y-cursor.y%32;
 })
 
 function draw(){
+ enemy.move()
 ctx.drawImage(bgImg,0,0);
 ctx.drawImage(enemyImg,enemy.x,enemy.y)
 ctx.drawImage(towerbtn,560,432,100,100);
@@ -60,7 +61,7 @@ ctx.drawImage(towerbtn,560,432,100,100);
 ctx.drawImage(drytower,tower.x,tower.y)
 }
 setInterval(draw,16);
-
+setInterval(draw,1000/FPS);
 
 function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight) {
     if(     pointX >= targetX
