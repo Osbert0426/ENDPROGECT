@@ -20,7 +20,7 @@ x:96,
 y:448
 };
 
-var cursur={
+var cursor={
 x:0,
 y:0
 }
