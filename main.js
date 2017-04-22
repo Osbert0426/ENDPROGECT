@@ -30,8 +30,8 @@ var tower={
 }
 
 $("#game-canvas").on("mousemove",function(event){
-cursur.x=event.offsetX
-cursur.y=event.offsetY
+cursor.x=event.offsetX
+cursor.y=event.offsetY
 })
 $("#game-canvas").on("click",function(event){
 if(isCollided(cursor.x,cursor.y,560,432,100,100)){
@@ -49,7 +49,7 @@ ctx.drawImage(bgImg,0,0);
 ctx.drawImage(enemyImg,enemy.x,enemy.y)
 ctx.drawImage(towerbtn,560,432,100,100);
  if(isBuilding){
- ctx.drawImage(drytower,cursur.x,cursur.y)
+ ctx.drawImage(drytower,cursor.x,cursor.y)
 }
 ctx.drawImage(drytower,tower.x,tower.y)
 }
