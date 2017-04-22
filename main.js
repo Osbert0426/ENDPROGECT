@@ -48,7 +48,7 @@ function draw(){
 ctx.drawImage(bgImg,0,0);
 ctx.drawImage(enemyImg,enemy.x,enemy.y)
 ctx.drawImage(towerbtn,560,432,100,100);
- if(isBuild){
+ if(isBuilding){
  ctx.drawImage(drytower,cursur.x,cursur.y)
 }
 ctx.drawImage(drytower,tower.x,tower.y)
