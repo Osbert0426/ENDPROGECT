@@ -38,7 +38,7 @@ if(isCollided(cursor.x,cursor.y,560,432,100,100)){
 isBuilding=true;   }
 else if(isBuilding&&!isCollided(cursor.x,cursor.y,560,432,100,100)){
 tower.x=cursor.x-cusor.x%32;
-tower.y=cursor.y-cusor.x%32;
+tower.y=cursor.y-cusor.y%32;
 }else
 {isBuilding=faise;
      }
