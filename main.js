@@ -11,7 +11,8 @@ drytower.src="images/tower.png";
 
 var canvas=document.getElementById("game-canvas");
 var ctx=canvas.getContext("2d");
-var isBuilding=false
+var isBuilding = false;
+
 
 //set敵人
 var enemy={
@@ -24,26 +25,34 @@ x:0,
 y:0
 }
 
+var tower={
+ 
+}
+
 $("#game-canvas").on("mousemove",function(event){
 cursur.x=event.offsetX
 cursur.y=event.offsetY
 })
-$("").on("click",function(event){
-if(isCollided(,,560,432,100,100)){
-isBuilding=   }else{
-isBuilding=
-}
+$("#game-canvas").on("click",function(event){
+if(isCollided(cursor.x,cursor.y,560,432,100,100)){
+isBuilding=true;   }else{
+isBuilding=false;
+}else if(isBuild&&!isCollided(cursor.x,cursor.y,560,432,100,100)){
+tower.x=cursor.x;
+tower.y=cursor.y;
+}else
+{isBuild=faise
+     }
 })
-
-
 
 function draw(){
 ctx.drawImage(bgImg,0,0);
 ctx.drawImage(enemyImg,enemy.x,enemy.y)
 ctx.drawImage(towerbtn,560,432,100,100);
- if(){
+ if(isBuild){
  ctx.drawImage(drytower,cursur.x,cursur.y)
 }
+ctx.drawImage(drytower,tower.x,tower.y)
 }
 setInterval(draw,16);
 
