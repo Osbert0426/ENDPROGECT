@@ -22,7 +22,7 @@ y:448,
  speedy:-64,
  pathDes:0,
  move:function(){
- if(iscollided(EnemyPath[this.pathDes].x,pathDes.x,this.x,pathDes.y,64/FPS,64/FPS)){
+ if(isCollided(EnemyPath[this.pathDes].x,pathDes.x,this.x,pathDes.y,64/FPS,64/FPS)){
 }
   else{
 this.x=this.x+this.speedx/FPS;
