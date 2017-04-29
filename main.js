@@ -20,13 +20,25 @@ x:32,
 y:448,
  speedx:0,
  speedy:-64,
+ pathDes:0,
  move:function(){
+ if(iscollided(EnemyPath[this.pathDes].x,pathDes.x,this.x,pathDes.y,64/FPS,64/FPS)){
+}
+  else{
 this.x=this.x+this.speedx/FPS;
-this.y=this.y+this.speedy/FPS;}
+this.y=this.y+this.speedy/FPS;
+  }
+ }
 };
 
 var EnemyPath=[
- 
+ {x:32,y:32},
+ {x:384,y:32},
+ {x:384,y:160},
+ {x:128,y:160},
+ {x:384,y:192},
+ {x:512,y:192},
+ {x:512,y:128},
 ]
 
 var cursor={
@@ -49,12 +61,12 @@ else if(isBuilding&&!isCollided(cursor.x,cursor.y,560,432,100,100)){
 tower.x=cursor.x-cursor.x%32;
 tower.y=cursor.y-cursor.y%32;
 }else
-{isBuilding=faise;
+{isBuilding=false;
      }
 })
 
 function draw(){
- //enemy.move()
+ enemy.move()
 ctx.drawImage(bgImg,0,0);
 ctx.drawImage(enemyImg,enemy.x,enemy.y)
 ctx.drawImage(towerbtn,560,432,100,100);
