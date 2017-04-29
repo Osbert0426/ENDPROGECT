@@ -23,6 +23,27 @@ y:448,
  pathDes:0,
  move:function(){
  if(isCollided(EnemyPath[this.pathDes].x,EnemyPath[this.pathDes].y,this.x,this.y,64/FPS,64/FPS)){
+  this.x=EnemyPath[this.pathDes].x;
+  this.y=EnemyPath[this.pathDes].y;
+  this.pathDes=this.pathDes+1;
+  
+  if(EnemyPath[this.pathDes].x>this.x){
+  this.speedx=64;
+  this.speedy=0;
+   }
+   if(EnemyPath[this.pathDes].x<this.x){
+  this.speedx=-64;
+  this.speedy=0;  
+   }
+   if(EnemyPath[this.pathDes].y>this.y){
+  this.speedx=0;
+  this.speedy=64;  
+   }
+   if(EnemyPath[this.pathDes].y<this.y){
+  this.speedx=0;
+  this.speedy=-64;  
+   }
+  
 }
   else{
 this.x=this.x+this.speedx/FPS;
