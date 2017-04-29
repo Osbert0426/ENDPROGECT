@@ -26,8 +26,7 @@ this.y=this.y+this.speedy/FPS;}
 };
 
 var EnemyPath=[
- {x:32,y:}
- {x:,y:}
+ 
 ]
 
 var cursor={
