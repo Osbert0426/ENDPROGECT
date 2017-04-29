@@ -78,8 +78,3 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
     }
 }
 
-var EnemyPath=[
- {x:32,y:}
- {x:,y:}
-]
-
