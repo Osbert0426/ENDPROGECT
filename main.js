@@ -16,7 +16,7 @@ var FPS=60;
 var clock = 0;
 
 //set敵人
-
+var enemies=[];
 function Enemy(){
 this.x=32;
 this.y=448;
@@ -95,8 +95,8 @@ function draw(){
 
 ctx.drawImage(bgImg,0,0);
  if(clock%70==0){
- var newEnemy=new Enemy
- enemies.push(newEnemy)
+ var newEnemy=new Enemy();
+ enemies.push(newEnemy);
  }
     
  for(var i=0;i<enemies.length;i++){
