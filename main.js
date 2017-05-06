@@ -23,9 +23,11 @@ y:448,
  pathDes:0,
  move:function(){
  if(isCollided(EnemyPath[this.pathDes].x,EnemyPath[this.pathDes].y,this.x,this.y,64/FPS,64/FPS)){
+  
   this.x=EnemyPath[this.pathDes].x;
   this.y=EnemyPath[this.pathDes].y;
   this.pathDes=this.pathDes+1;
+  console.log("cheak");
   
   if(EnemyPath[this.pathDes].x>this.x){
   this.speedx=64;
@@ -57,7 +59,7 @@ var EnemyPath=[
  {x:384,y:32},
  {x:384,y:160},
  {x:128,y:160},
- {x:128,y:352},
+ {x:128,y:320},
  {x:512,y:192},
  {x:512,y:128},
 ]
