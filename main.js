@@ -53,7 +53,6 @@ this.y=this.y+this.speedy/FPS;
   }
  }
 }; 
-}
 
 var enemy=function Enemy;
 
