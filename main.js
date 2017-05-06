@@ -12,7 +12,8 @@ drytower.src="images/tower.png";
 var canvas=document.getElementById("game-canvas");
 var ctx=canvas.getContext("2d");
 var isBuilding = false;
-var FPS=60
+var FPS=60;
+var clock = 0;
 
 //set敵人
 
@@ -54,7 +55,7 @@ this.y=this.y+this.speedy/FPS;
  }
 }; 
 
-var enemy=new Enemy();
+
 
 var EnemyPath=[
  {x:32,y:32},
@@ -91,16 +92,25 @@ tower.y=cursor.y-cursor.y%32;
 })
 
 function draw(){
- enemy.move()
+
 ctx.drawImage(bgImg,0,0);
-ctx.drawImage(enemyImg,enemy.x,enemy.y)
+ if(clock%70==0){
+ var newEnemy=new Enemy
+ enemies.push(newEnemy)
+ }
+    
+ for(var i=0;i<enemies.length;i++){
+ enemies[i].move();
+ ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y)
+ }
+  
 ctx.drawImage(towerbtn,560,432,100,100);
  if(isBuilding){
  ctx.drawImage(drytower,cursor.x,cursor.y)
 }
 ctx.drawImage(drytower,tower.x,tower.y)
+ clock++;
 }
-setInterval(draw,16);
 setInterval(draw,1000/FPS);
 
 function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight) {
