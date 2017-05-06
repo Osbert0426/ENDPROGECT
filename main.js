@@ -54,7 +54,7 @@ this.y=this.y+this.speedy/FPS;
  }
 }; 
 
-var enemy=function Enemy;
+var enemy=new Enemy;
 
 var EnemyPath=[
  {x:32,y:32},
