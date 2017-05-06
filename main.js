@@ -15,19 +15,19 @@ var isBuilding = false;
 var FPS=60
 
 //set敵人
-var enemy={
-x:32,
-y:448,
- speedx:0,
- speedy:-64,
- pathDes:0,
- move:function(){
+
+function Enemy(){
+this.x=32;
+this.y=448;
+this.speedx=0;
+this.speedy=-64;
+this.pathDes=0;
+this.move=function(){
  if(isCollided(EnemyPath[this.pathDes].x,EnemyPath[this.pathDes].y,this.x,this.y,64/FPS,64/FPS)){
   
   this.x=EnemyPath[this.pathDes].x;
   this.y=EnemyPath[this.pathDes].y;
   this.pathDes=this.pathDes+1;
-  console.log("cheak");
   
   if(EnemyPath[this.pathDes].x>this.x){
   this.speedx=64;
@@ -52,7 +52,10 @@ this.x=this.x+this.speedx/FPS;
 this.y=this.y+this.speedy/FPS;
   }
  }
-};
+}; 
+}
+
+var enemy=function Enemy;
 
 var EnemyPath=[
  {x:32,y:32},
