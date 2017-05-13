@@ -14,6 +14,9 @@ var ctx=canvas.getContext("2d");
 var isBuilding = false;
 var FPS=60;
 var clock = 0;
+var HP=100;
+ctx.fillstyle="white";
+ctx.font="24px Arial";
 
 //set敵人
 var enemies=[];
@@ -103,7 +106,7 @@ ctx.drawImage(bgImg,0,0);
  enemies[i].move();
  ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y)
  }
-  
+  ctx.fillText("HP:"+HP,20,20)
 ctx.drawImage(towerbtn,560,432,100,100);
  if(isBuilding){
  ctx.drawImage(drytower,cursor.x,cursor.y)
