@@ -82,7 +82,20 @@ y:0
 }
 
 var tower={
- 
+ range:128,
+ aimingEnemyId:null,
+ searchEmeny:function(){
+for(var i=0;i<enemies.length;i++){
+var distance=Math.sprt(
+ Math.pow(this.x-enemies[i].x,2)+Math.pow(this.y-enemies[i].y,2)
+)
+ if(distance<this.range){
+  this.aimingEnemyId=i;
+   return;                     
+ }
+   }
+  this.aimingEnemyId=null;
+  }
 }
 
 $("#game-canvas").on("mousemove",function(event){
