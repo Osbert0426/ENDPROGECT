@@ -109,9 +109,13 @@ ctx.drawImage(bgImg,0,0);
  }
     
  for(var i=0;i<enemies.length;i++){
+  if(enemy[i].hp<1{
+     enemies.splice(i,1);
+     }else{
  enemies[i].move();
  ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y)
  }
+}
   ctx.fillText("HP:"+HP,20,20)
 ctx.drawImage(towerbtn,560,432,100,100);
  if(isBuilding){
