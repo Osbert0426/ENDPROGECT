@@ -3,7 +3,9 @@ var bgImg=document.createElement("img");
 var enemyImg=document.createElement("img");
 var towerbtn=document.createElement("img");
 var drytower=document.createElement("img");
+var crosshairImage=document.createElement("img");
 
+crosshairImage="images/crosshair.png";
 bgImg.src="images/map3.png";
 enemyImg.src="images/jason.gif"
 towerbtn.src="images/tower-btn.png";
@@ -122,7 +124,7 @@ ctx.drawImage(bgImg,0,0);
  }
     
  for(var i=0;i<enemies.length;i++){
-  if(enemy[i].hp<1{
+  if(enemy[i].hp<1){
      enemies.splice(i,1);
      }else{
  enemies[i].move();
@@ -135,6 +137,12 @@ ctx.drawImage(towerbtn,560,432,100,100);
  ctx.drawImage(drytower,cursor.x,cursor.y)
 }
 ctx.drawImage(drytower,tower.x,tower.y)
+ 
+ tower.searchEmeny();
+ if(tower.aimingEnemyId!=null){
+    var id=tower.aimingEnemyId
+    ctx.drawImage(crosshairImage,enemies[id].x,enemies[id].y)
+  }
  clock++;
 }
 setInterval(draw,1000/FPS);
