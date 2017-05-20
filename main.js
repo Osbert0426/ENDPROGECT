@@ -117,7 +117,7 @@ var distance=Math.sqrt(
  ctx.strokeStyle="red";
   ctx.lineWidth=3;
  ctx.stroke();
-  enemies[id].Enemyhp=enemies[id].Enemyhp-this.damage
+  enemies[id].Enemyhp=enemies[id].EnemyHp-this.damage
  },
  fireRate:1,
  readyToShootTime:1,
@@ -150,7 +150,7 @@ ctx.drawImage(bgImg,0,0);
  }
     
  for(var i=0;i<enemies.length;i++){
-  if(enemies[i].Enemyhp<1){
+  if(enemies[i].EnemyHp<1){
      enemies.splice(i,1);
    
    score=score+25
