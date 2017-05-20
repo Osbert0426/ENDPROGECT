@@ -117,7 +117,7 @@ var distance=Math.sqrt(
  ctx.strokeStyle="red";
   ctx.lineWidth=3;
  ctx.stroke();
-  enemies[id].Enemyhp=enemies[id].EnemyHp-this.damage
+  enemies[id].EnemyHp=enemies[id].EnemyHp-this.damage
  },
  fireRate:1,
  readyToShootTime:1,
