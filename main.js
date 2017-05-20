@@ -101,10 +101,10 @@ var distance=Math.sqrt(
 )
  if(distance<this.range){
   this.aimingEnemyId=i;
-   return; 
   if(this.readyToShootTime<=0){
   this.Shoot(i);
    this.readyToShootTime=this.fireRate
+     return; 
   }
  }
    }
