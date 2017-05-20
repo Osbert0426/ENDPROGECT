@@ -92,7 +92,7 @@ var tower={
  aimingEnemyId:null,
  searchEmeny:function(){
   
-  this.___=this.readyToShootTime-1/FPS
+  this.readyToShootTime=this.readyToShootTime-1/FPS
   
 for(var i=0;i<enemies.length;i++){
 var distance=Math.sqrt(
@@ -161,8 +161,8 @@ ctx.drawImage(bgImg,0,0);
 }
   ctx.fillText("HP:"+HP,20,20)
  
-ctx, fillText("money:"+money,50,20)
-ctx, fillText("score:"+score,80,20)
+ctx. fillText("money:"+money,50,20)
+ctx. fillText("score:"+score,80,20)
  
 ctx.drawImage(towerbtn,560,432,100,100);
  if(isBuilding){
