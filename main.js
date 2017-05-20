@@ -5,7 +5,7 @@ var towerbtn=document.createElement("img");
 var drytower=document.createElement("img");
 var crosshairImage=document.createElement("img");
 
-crosshairImage="images/crosshair.png";
+crosshairImage.src="images/crosshair.png";
 bgImg.src="images/map3.png";
 enemyImg.src="images/jason.gif"
 towerbtn.src="images/tower-btn.png";
