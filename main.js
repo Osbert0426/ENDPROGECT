@@ -33,7 +33,7 @@ this.speedx=0;
 this.speedy=-64;
 this.pathDes=0;
  
-this.EnemyHP=2;
+this.EnemyHP=20;
  
 this.move=function(){
  if(isCollided(EnemyPath[this.pathDes].x,EnemyPath[this.pathDes].y,this.x,this.y,64/FPS,64/FPS)){
@@ -121,7 +121,7 @@ var distance=Math.sqrt(
  },
  fireRate:1,
  readyToShootTime:1,
- damge:1
+ damge:10
  
 }
 
