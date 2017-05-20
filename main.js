@@ -87,7 +87,7 @@ x:0,
 y:0
 }
 
-function Tower={
+var tower={
  
  range:128,
  aimingEnemyId:null,
