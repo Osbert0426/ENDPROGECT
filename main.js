@@ -17,6 +17,9 @@ var isBuilding = false;
 var FPS=60;
 var clock = 0;
 var HP=100;
+var score=0;
+var money=25;
+
 ctx.fillstyle="white";
 ctx.font="24px Arial";
 
@@ -147,12 +150,20 @@ ctx.drawImage(bgImg,0,0);
  for(var i=0;i<enemies.length;i++){
   if(enemies[i].hp<1){
      enemies.splice(i,1);
+   
+   score=score+25
+   money=money+10
+   
      }else{
  enemies[i].move();
  ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y)
  }
 }
   ctx.fillText("HP:"+HP,20,20)
+ 
+ctx, fillText("money:"+money,50,20)
+ctx, fillText("score:"+score,80,20)
+ 
 ctx.drawImage(towerbtn,560,432,100,100);
  if(isBuilding){
  ctx.drawImage(drytower,cursor.x,cursor.y)
