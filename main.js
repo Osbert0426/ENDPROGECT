@@ -25,6 +25,7 @@ ctx.font="24px Arial";
 
 //set敵人
 var enemies=[];
+var Towers=[];
 function Enemy(){
 this.x=32;
 this.y=448;
@@ -86,7 +87,7 @@ x:0,
 y:0
 }
 
-var tower={
+function Tower={
  
  range:128,
  aimingEnemyId:null,
@@ -132,6 +133,7 @@ $("#game-canvas").on("click",function(event){
 if(isCollided(cursor.x,cursor.y,560,432,100,100)){
 isBuilding=true;   }
 else if(isBuilding&&!isCollided(cursor.x,cursor.y,560,432,100,100)){
+Towers.push(new Towers(tower.x=cursor.x-cursor.x%32;,tower.y=cursor.y-cursor.y%32))
 tower.x=cursor.x-cursor.x%32;
 tower.y=cursor.y-cursor.y%32;
 }else
@@ -161,8 +163,8 @@ ctx.drawImage(bgImg,0,0);
 }
   ctx.fillText("HP:"+HP,20,20)
  
-ctx. fillText("money:"+money,100,20)
-ctx. fillText("score:"+score,100,20)
+ctx. fillText("money:"+money,200,20)
+ctx. fillText("score:"+score,300,20)
  
 ctx.drawImage(towerbtn,560,432,100,100);
  if(isBuilding){
