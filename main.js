@@ -124,7 +124,7 @@ ctx.drawImage(bgImg,0,0);
  }
     
  for(var i=0;i<enemies.length;i++){
-  if(enemy[i].hp<1){
+  if(enemies[i].hp<1){
      enemies.splice(i,1);
      }else{
  enemies[i].move();
