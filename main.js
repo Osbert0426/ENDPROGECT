@@ -84,6 +84,7 @@ y:0
 }
 
 var tower={
+ 
  range:128,
  aimingEnemyId:null,
  searchEmeny:function(){
@@ -97,7 +98,20 @@ var distance=Math.sqrt(
  }
    }
   this.aimingEnemyId=null;
-  }
+  },
+ shoot:function(id){
+ ctx.beginPath();
+ ctx.moveTo(this.x,this.y);
+ ctx.lineTo(enemies[id].x,enemies[id].y);
+ ctx.strokeStyle="red";
+  ctx.lineWidth=3;
+ ctx.stroke();
+  enemies[id].Enemyhp=enemies[id].Enemyhp-this.damage
+ },
+ fireRate:1,
+ readyToShootTime:1,
+ damge:1
+ 
 }
 
 $("#game-canvas").on("mousemove",function(event){
