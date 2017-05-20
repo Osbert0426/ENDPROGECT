@@ -150,7 +150,7 @@ ctx.drawImage(bgImg,0,0);
  }
     
  for(var i=0;i<enemies.length;i++){
-  if(enemies[i].hp<1){
+  if(enemies[i].Enemyhp<1){
      enemies.splice(i,1);
    
    score=score+25
