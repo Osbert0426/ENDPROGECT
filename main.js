@@ -33,12 +33,12 @@ this.speedx=0;
 this.speedy=-64;
 this.pathDes=0;
  
-this.EnemyHP=20;
+this.EnemyHp=20;
  
 this.move=function(){
  if(isCollided(EnemyPath[this.pathDes].x,EnemyPath[this.pathDes].y,this.x,this.y,64/FPS,64/FPS)){
  if(this.pathDes===EnemyPath.length-1){
- this.EnemyHP=0;
+ this.EnemyHp=0;
  HP=HP-10;
  }
 this.x=EnemyPath[this.pathDes].x;
