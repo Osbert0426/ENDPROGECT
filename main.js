@@ -87,7 +87,7 @@ x:0,
 y:0
 }
 
-var Tower(x,y){
+function Tower(x,y){
 this.x=x;
 this.y=y;
 this.range=128;
