@@ -118,8 +118,10 @@ ctx.lineTo(enemies[id].x,enemies[id].y);
 ctx.strokeStyle="red";
 ctx.lineWidth=3;
 ctx.stroke();
+ console.log(enemies[id].EnemyHp)
+ console.log(this.damage)
 enemies[id].EnemyHp=enemies[id].EnemyHp-this.damage
-console.log(enemies[id].EnemyHp Enemy[id])
+console.log(enemies[id].EnemyHp)
 };
 this.fireRate=1;
 this.readyToShootTime=1;
