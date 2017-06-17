@@ -122,7 +122,7 @@ var distance=Math.sqrt(
  },
  fireRate:1,
  readyToShootTime:1,
- damge:10
+ damage:10
  
 }
 
