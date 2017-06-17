@@ -87,11 +87,11 @@ x:0,
 y:0
 }
 
-var tower={
+var Tower(){
  
- range:128,
- aimingEnemyId:null,
- searchEmeny:function(){
+ this.range:128;
+ this.aimingEnemyId:null;
+ this.this.searchEmeny:function(){
   
   this.readyToShootTime=this.readyToShootTime-1/FPS
   
@@ -109,8 +109,8 @@ var distance=Math.sqrt(
  }
    }
   this.aimingEnemyId=null;
-  },
- shoot:function(id){
+  };
+ this.shoot:function(id){
  ctx.beginPath();
  ctx.moveTo(this.x,this.y);
  ctx.lineTo(enemies[id].x,enemies[id].y);
@@ -119,10 +119,10 @@ var distance=Math.sqrt(
  ctx.stroke();
   enemies[id].EnemyHp=enemies[id].EnemyHp-this.damage
   console.log(enemies[id].EnemyHp)
- },
- fireRate:1,
- readyToShootTime:1,
- damage:10
+ };
+ this.fireRate=1;
+ this.readyToShootTime=1;
+ this.damage=10
  
 }
 
