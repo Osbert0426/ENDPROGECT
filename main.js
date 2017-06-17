@@ -119,7 +119,7 @@ ctx.strokeStyle="red";
 ctx.lineWidth=3;
 ctx.stroke();
 enemies[id].EnemyHp=enemies[id].EnemyHp-this.damage
-console.log(enemies[id].EnemyHp)
+console.log(enemies[id].EnemyHp Enemy[id])
 };
 this.fireRate=1;
 this.readyToShootTime=1;
