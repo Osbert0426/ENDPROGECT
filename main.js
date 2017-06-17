@@ -111,7 +111,7 @@ return;
 }
 this.aimingEnemyId=null;
 };
-this.shoot:function(id){
+this.shoot=function(id){
 ctx.beginPath();
 ctx.moveTo(this.x,this.y);
 ctx.lineTo(enemies[id].x,enemies[id].y);
