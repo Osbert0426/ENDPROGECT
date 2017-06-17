@@ -47,7 +47,7 @@ this.pathDes=this.pathDes+1;
   
 if(EnemyPath[this.pathDes].x>this.x){
 this.speedx=64;
-this.speedy=0;s
+this.speedy=0;
 }
    if(EnemyPath[this.pathDes].x<this.x){
   this.speedx=-64;
