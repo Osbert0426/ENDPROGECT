@@ -143,8 +143,8 @@ var newTower=new Tower(cursor.x-cursor.x%32,cursor.y-cursor.y%32);
 towers.push(newTower)
 isBuilding=false;
 
-}else
-{isBuilding=false;
+}else{
+ isBuilding=false;
      }
 })
 
@@ -177,7 +177,7 @@ ctx.drawImage(towerbtn,560,432,100,100);
 if(isBuilding){
 ctx.drawImage(drytower,cursor.x,cursor.y)
 }
-for(var i=0;i<towers.leogth;i++){
+for(var i=0;i<towers.length;i++){
 ctx.drawImage(drytower,towers[i].x,towers[i].y)
  
 towers[i].searchEmeny();
