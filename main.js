@@ -92,7 +92,7 @@ this.x=x;
 this.y=y;
 this.range=128;
 this.aimingEnemyId=null;
-this.this.searchEmeny:function(){
+this.this.searchEmeny=function(){
   
 this.readyToShootTime=this.readyToShootTime-1/FPS
   
