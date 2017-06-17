@@ -139,7 +139,7 @@ isBuilding=true;
 }
 else if(isBuilding&&!isCollided(cursor.x,cursor.y,560,432,100,100)){
 money=money-20
-var newTower=newTower(cursor.x-cursor.x%32,cursor.y-cursor.y%32);
+var newTower=new Tower(cursor.x-cursor.x%32,cursor.y-cursor.y%32);
 towers.push(newTower)
 isBuilding=false;
 
